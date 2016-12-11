@@ -1,10 +1,10 @@
 {
   "name": "zuul-ngrok",
-  "version": "4.0.0",
-  "description": "An ngrok tunnel implementation for Zuul",
+  "version": "1.0.0",
+  "description": "Yet another ngrok tunnel implementation for Zuul",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rase-/zuul-ngrok"
+    "url": "git://github.com/nolanlawson/zuul-ngrok-2"
   },
   "keywords": [
     "zuul",
@@ -17,5 +17,9 @@
     "xtend": "4.0.1"
   },
   "author": "Tony Kovanen <tonykovanen@hotmail.com>",
+  "contributors": [
+    "Tony Kovanen <tonykovanen@hotmail.com>",
+    "Nolan Lawson <nolan@nolanlawson.com>"
+  ],
   "license": "MIT"
 }

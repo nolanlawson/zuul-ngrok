@@ -3,6 +3,8 @@ var xtend = require('xtend');
 
 var AUTH_TOKEN = process.env.NGROK_AUTH_TOKEN;
 
+var DEFAULT_TIMEOUT = 10000;
+
 function Tunnel(config) {
   if (!this instanceof Tunnel) {
     return new Tunnel(config);
@@ -27,9 +29,10 @@ Tunnel.prototype.connect = function(port, cb) {
     }
 
     self.ngrok_url = url;
+    var timeout = typeof self.tunnel_settings.timeout === 'number' ? self.tunnel_settings.timeout : DEFAULT_TIMEOUT
     setTimeout(function () {
       cb(null, url.replace('tcp://', 'https://') + '/__zuul');
-    }, 5000);
+    }, timeout);
   });
 };
 
