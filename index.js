@@ -27,7 +27,7 @@ Tunnel.prototype.connect = function(port, cb) {
     }
 
     self.ngrok_url = url;
-    cb(null, url.replace('tcp://', 'http://') + '/__zuul');
+    cb(null, url.replace('tcp://', 'https://') + '/__zuul');
   });
 };
 
